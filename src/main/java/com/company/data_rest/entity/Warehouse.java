@@ -17,5 +17,5 @@ public class Warehouse {
     private String name;
     private boolean active;
     @ManyToMany
-    private Set<Users> users;
+    private Set<User> users;
 }
