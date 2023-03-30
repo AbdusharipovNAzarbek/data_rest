@@ -24,4 +24,13 @@ public class Output {
     private Warehouse warehouse;
     @ManyToOne
     private Currency currency;
+
+    public Output(Date date, String facture_number, Integer code, Client client, Warehouse warehouse, Currency currency) {
+        this.date = date;
+        this.facture_number = facture_number;
+        this.code = code;
+        this.client = client;
+        this.warehouse = warehouse;
+        this.currency = currency;
+    }
 }

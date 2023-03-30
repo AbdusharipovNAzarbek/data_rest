@@ -22,7 +22,15 @@ public class InputProduct {
     @Column(nullable = false)
     private Double amount;
     @ManyToOne
-    private Product products;
+    private Product product;
     @ManyToOne
     private Input input;
+
+    public InputProduct(Date expire_date, Double price, Double amount, Product products, Input input) {
+        this.expire_date = expire_date;
+        this.price = price;
+        this.amount = amount;
+        this.product = products;
+        this.input = input;
+    }
 }
