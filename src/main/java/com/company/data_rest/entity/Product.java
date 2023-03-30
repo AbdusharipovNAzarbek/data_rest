@@ -24,4 +24,12 @@ public class Product {
     @Column(unique = true)
     private String code;
     private boolean active = true;
+
+    public Product(String name, Category category, Attachment attachment, Measure measure, String code) {
+        this.name = name;
+        this.category = category;
+        this.attachment = attachment;
+        this.measure = measure;
+        this.code = code;
+    }
 }

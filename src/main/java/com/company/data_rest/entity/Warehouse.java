@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Set;
+
+import java.util.List;
+
 
 @Data
 @AllArgsConstructor
@@ -17,5 +19,10 @@ public class Warehouse {
     private String name;
     private boolean active;
     @ManyToMany
-    private Set<User> users;
+    private List<User> users;
+
+    public Warehouse(String name, List<User> users) {
+        this.name = name;
+        this.users = users;
+    }
 }
