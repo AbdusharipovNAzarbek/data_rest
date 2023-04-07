@@ -3,7 +3,7 @@ package com.company.data_rest.controller;
 import com.company.data_rest.entity.InputProduct;
 import com.company.data_rest.payload.InputProductDto;
 import com.company.data_rest.payload.Result;
-import com.company.data_rest.service.InputProductService;
+import com.company.data_rest.service.InputProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +13,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/input_product")
-public class InputProductController {
+public class InputsProductController {
     @Autowired
-    InputProductService inputProductService;
+    InputProductsService inputProductService;
 
     @GetMapping
     public ResponseEntity<List<InputProduct>> get(@RequestParam int page, @RequestParam int size) {

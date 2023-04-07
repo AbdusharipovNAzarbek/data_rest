@@ -3,7 +3,7 @@ package com.company.data_rest.controller;
 import com.company.data_rest.entity.Input;
 import com.company.data_rest.payload.InputDto;
 import com.company.data_rest.payload.Result;
-import com.company.data_rest.service.InputService;
+import com.company.data_rest.service.InputsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +13,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/input")
-public class InputController {
+public class InputsController {
     @Autowired
-    InputService inputService;
+    InputsService inputService;
 
     @GetMapping
     public ResponseEntity<List<Input>> get(@RequestParam int page, @RequestParam int size) {

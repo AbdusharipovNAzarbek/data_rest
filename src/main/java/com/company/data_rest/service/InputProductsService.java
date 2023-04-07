@@ -5,8 +5,8 @@ import com.company.data_rest.entity.InputProduct;
 import com.company.data_rest.entity.Product;
 import com.company.data_rest.payload.InputProductDto;
 import com.company.data_rest.payload.Result;
-import com.company.data_rest.repository.InputProductRepository;
-import com.company.data_rest.repository.InputRepository;
+import com.company.data_rest.repository.InputProductsRepository;
+import com.company.data_rest.repository.InputsRepository;
 import com.company.data_rest.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,13 +19,13 @@ import java.util.Optional;
 
 @Service
 
-public class InputProductService {
+public class InputProductsService {
     @Autowired
-    InputProductRepository inputProductRepository;
+    InputProductsRepository inputProductRepository;
     @Autowired
     ProductRepository productRepository;
     @Autowired
-    InputRepository inputRepository;
+    InputsRepository inputRepository;
 
     public List<InputProduct> get(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);

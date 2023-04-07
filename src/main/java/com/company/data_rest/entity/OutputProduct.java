@@ -22,4 +22,11 @@ public class OutputProduct {
     private Product product;
     @ManyToOne
     private Output output;
+
+    public OutputProduct(Double price, Double amount, Product product, Output output) {
+        this.price = price;
+        this.amount = amount;
+        this.product = product;
+        this.output = output;
+    }
 }

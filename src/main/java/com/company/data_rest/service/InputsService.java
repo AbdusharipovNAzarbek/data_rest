@@ -7,7 +7,7 @@ import com.company.data_rest.entity.Warehouse;
 import com.company.data_rest.payload.InputDto;
 import com.company.data_rest.payload.Result;
 import com.company.data_rest.repository.CurrencyRepository;
-import com.company.data_rest.repository.InputRepository;
+import com.company.data_rest.repository.InputsRepository;
 import com.company.data_rest.repository.SupplierRepository;
 import com.company.data_rest.repository.WarehouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +16,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.security.cert.Certificate;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class InputService {
+public class InputsService {
     @Autowired
-    InputRepository inputRepository;
+    InputsRepository inputRepository;
     @Autowired
     SupplierRepository supplierRepository;
     @Autowired
